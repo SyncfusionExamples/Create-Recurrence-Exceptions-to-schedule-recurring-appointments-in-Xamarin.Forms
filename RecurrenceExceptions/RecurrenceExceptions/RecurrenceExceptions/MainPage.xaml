@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RecurrenceExceptions"
+             x:Class="RecurrenceExceptions.MainPage"
+             xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+	 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Button Text="AddExceptionDates" Command="{Binding AddExceptionDates}"></Button>
+        <Button Text="RemoveExceptionDates" Command="{Binding RemoveExceptionDates}"></Button>
+        <Button Text="AddExceptionAppointment" Command="{Binding AddExceptionAppointment}"></Button>
+        <Button Text="RemoveExceptionAppointment" Command="{Binding RemoveExceptionAppointment}"></Button>
+       <schedule:SfSchedule x:Name="schedule" ScheduleView="WeekView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" DataSource="{Binding Appointments}" MoveToDate="{Binding MoveToDate}">
+            </schedule:SfSchedule>
+        <StackLayout.BindingContext>
+             <local:AppointmentViewModel/>
+        </StackLayout.BindingContext>
+    </StackLayout>
+
+</ContentPage>
