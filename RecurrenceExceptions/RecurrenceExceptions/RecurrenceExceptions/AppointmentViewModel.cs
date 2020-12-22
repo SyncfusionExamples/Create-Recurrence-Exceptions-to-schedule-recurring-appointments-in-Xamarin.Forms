@@ -86,7 +86,7 @@ namespace RecurrenceExceptions
                 EndTime = new DateTime(2017, 09, 07, 14, 0, 0),
                 Subject = "Meeting",
                 Color = Color.Red,
-                RecurrenceId = recurrenceAppointment, // set the parent appointment to recurrence Id
+                RecurrenceId = recurrenceAppointment.Id, // set the parent appointment Id to recurrence Id
                 ExceptionOccurrenceActualDate = exceptionDate
             };
 
