@@ -26,6 +26,7 @@ namespace RecurrenceExceptions
             //Adding schedule appointment in schedule appointment collection 
             var recurrenceAppointment = new ScheduleAppointment()
             {
+                Id = 1,
                 StartTime = new DateTime(2017, 09, 01, 10, 0, 0),
                 EndTime = new DateTime(2017, 09, 01, 12, 0, 0),
                 Subject = "Occurs Daily",
